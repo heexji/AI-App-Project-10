@@ -1,48 +1,29 @@
-## Learning Imbalanced Datasets with Label-Distribution-Aware Margin Loss 
-Kaidi Cao, Colin Wei, Adrien Gaidon, Nikos Arechiga, Tengyu Ma
-_________________
+@@ -1,28 +1,48 @@
+# 인공지능응용 10팀 - 프로젝트 repository
+광운대학교 인공지능응용 수업의 팀 프로젝트 자료를 정리한 공간입니다.
+프로젝트는 아래 논문을 기반으로 구현 및 실험을 진행합니다.
 
-This is the official implementation of LDAM-DRW in the paper [Learning Imbalanced Datasets with Label-Distribution-Aware Margin Loss](https://arxiv.org/pdf/1906.07413.pdf) in PyTorch.
+## 📄 참고 논문
+**LDAM: Learning Imbalanced Datasets with Label-Distribution-Aware Margin Loss**
+https://arxiv.org/abs/1906.07413
 
-### Dependency
+## 👥 팀원
+- 김선규
+- 김희지
+- 배상윤
+- 정석영
+- 조희문
 
-The code is built with following libraries:
+## 📌 프로젝트 개요
+본 프로젝트의 목표는 논문 기반 모델 재현 및 비교실험입니다.
 
-- [PyTorch](https://pytorch.org/) 1.2
-- [TensorboardX](https://github.com/lanpa/tensorboardX)
-- [scikit-learn](https://scikit-learn.org/stable/)
+- 데이터 전처리 및 실험 파이프라인 구축
 
-### Dataset
+- 모델 학습 및 성능 비교
 
-- Imbalanced [CIFAR](https://www.cs.toronto.edu/~kriz/cifar.html). The original data will be downloaded and converted by `imbalancec_cifar.py`.
-- The paper also reports results on Tiny ImageNet and iNaturalist 2018. We will update the code for those datasets later.
+- 결과 해석 및 시각화
 
-### Training 
+## 실행방법
+pip install -r requirements.txt
 
-We provide several training examples with this repo:
-
-- To train the ERM baseline on long-tailed imbalance with ratio of 100
-
-```bash
-python cifar_train.py --gpu 0 --imb_type exp --imb_factor 0.01 --loss_type CE --train_rule None
-```
-
-- To train the LDAM Loss along with DRW training on long-tailed imbalance with ratio of 100
-
-```bash
-python cifar_train.py --gpu 0 --imb_type exp --imb_factor 0.01 --loss_type LDAM --train_rule DRW
-```
-
-
-### Reference
-
-If you find our paper and repo useful, please cite as
-
-```
-@inproceedings{cao2019learning,
-  title={Learning Imbalanced Datasets with Label-Distribution-Aware Margin Loss},
-  author={Cao, Kaidi and Wei, Colin and Gaidon, Adrien and Arechiga, Nikos and Ma, Tengyu},
-  booktitle={Advances in Neural Information Processing Systems},
-  year={2019}
-}
-```
+추후 업데이트 예정

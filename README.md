@@ -53,3 +53,28 @@ https://arxiv.org/abs/1906.07413
     >>   --train_rule None `
     >>   --bdd_root "C:\Users\(username)\.cache\kagglehub\datasets\solesensei\solesensei_bdd100k\versions\2" ##설치된 실제 경로 확인
 
+**Cross Entropy(CE) CIFAR100 데이터 기반 실험**
+
+1. cd CE_experiment
+
+2. python CE_train.py
+    - 실행 시 data 폴더에 CIFAR100 데이터셋이 불러와지고 실험 시작
+    - 끝나고 model 폴더에 best model 저장되는 것 확인
+
+3. python CE_evaluate.py
+    - 실행 시 model/best~~.pth 파일을 통해 평가 시작
+    - 결과 csv 파일 저장되는 것 확인
+
+**Focal loss CIFAR100 데이터 기반 실험**
+
+1. cd Focal_experiment
+
+2. python Focal_loss_train.py
+    - 실행 시 data 폴더에 CIFAR100 데이터셋이 불러와지고 실험 시작
+    - 끝나고 model 폴더에 best model 저장되는 것 확인
+
+3. python Focal_evaluate.py
+    - 실행 시 model/best~~.pth 파일을 통해 평가 시작
+    - 결과 csv 파일 저장되는 것 확인
+
+

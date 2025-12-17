@@ -20,8 +20,6 @@ NUM_WORKERS = 4
 CHECKPOINT_PATH = "model/best_ce_cifar10_resnet32.pth"
 OUTPUT_CSV = "ce_eval_result.csv"
 
-# GPU1만 쓰고 싶으면 실행에서 이걸 추천:
-# CUDA_VISIBLE_DEVICES=1 python CE_evaluate.py
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 # ===============================================
 
